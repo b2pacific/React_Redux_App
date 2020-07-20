@@ -1,7 +1,7 @@
 const profReducer = (state={}, action) => {
     switch(action.type){
         case "Add":
-            return state = action.profile;
+            return Object.assign({}, state, action.profile);
         default:
             return state;
     }

@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      items: [{name: "Loading"}]
+      items: [{name: "Hello", username: "Hi"}]
     };
     
   }
@@ -26,11 +26,11 @@ class App extends React.Component {
     return (
       <div>
         <Switch>
-          <Route path="/">
-            <Home people={this.state.items} />
-          </Route>
           <Route path="/user/:username">
             <User />
+          </Route>
+          <Route path="/">
+            <Home people={this.state.items} />
           </Route>
         </Switch>
       </div>
